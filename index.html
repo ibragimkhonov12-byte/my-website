@@ -1,0 +1,497 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космос — Вселенная без границ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ЗВЁЗДНОЕ НЕБО -->
+<div class="space-bg">
+    <div class="stars"></div>
+    <div class="stars stars2"></div>
+    <div class="stars stars3"></div>
+</div>
+
+<!-- НАВИГАЦИЯ -->
+<header class="navbar">
+    <div class="logo">
+        <span>◉</span> COSMOS
+    </div>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#solar">Система</a>
+        <a href="#galaxy">Галактики</a>
+        <a href="#missions">Миссии</a>
+        <a href="#facts">Факты</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+
+<!-- ГЛАВНЫЙ ЭКРАН -->
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">✦ ИССЛЕДУЙ ВСЕЛЕННУЮ</div>
+
+        <h1>
+            ВСЕЛЕННАЯ<br>
+            <span>БЕЗ ГРАНИЦ</span>
+        </h1>
+
+        <p>
+            Миллиарды галактик, бесчисленные звёзды
+            и тайны, которые человечество только начинает открывать.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="main-btn" onclick="scrollToSection('solar')">
+                🚀 НАЧАТЬ ПУТЕШЕСТВИЕ
+            </button>
+
+            <button class="outline-btn" onclick="showFact()">
+                ✦ СЛУЧАЙНЫЙ ФАКТ
+            </button>
+        </div>
+
+    </div>
+
+    <!-- ПЛАНЕТА -->
+    <div class="hero-planet">
+        <div class="planet-ring"></div>
+        <div class="planet-light"></div>
+    </div>
+
+    <div class="scroll-down">
+        ↓
+    </div>
+
+</section>
+
+
+<!-- СТАТИСТИКА -->
+<section class="stats">
+
+    <div class="stat">
+        <strong>8</strong>
+        <span>Планет</span>
+    </div>
+
+    <div class="stat">
+        <strong>1</strong>
+        <span>Солнце</span>
+    </div>
+
+    <div class="stat">
+        <strong>200+</strong>
+        <span>Миссий</span>
+    </div>
+
+    <div class="stat">
+        <strong>∞</strong>
+        <span>Тайн</span>
+    </div>
+
+</section>
+
+
+<!-- СОЛНЕЧНАЯ СИСТЕМА -->
+<section id="solar" class="section">
+
+    <div class="section-title">
+        <span>01 / СОЛНЕЧНАЯ СИСТЕМА</span>
+        <h2>НАШ КОСМИЧЕСКИЙ ДОМ</h2>
+        <p>
+            Солнце и все объекты, которые вращаются вокруг него.
+        </p>
+    </div>
+
+    <div class="solar-system">
+
+        <div class="sun">
+            <span>СОЛНЦЕ</span>
+        </div>
+
+        <div class="orbit orbit1">
+            <div class="planet mercury"></div>
+        </div>
+
+        <div class="orbit orbit2">
+            <div class="planet venus"></div>
+        </div>
+
+        <div class="orbit orbit3">
+            <div class="planet earth">
+                <div class="moon"></div>
+            </div>
+        </div>
+
+        <div class="orbit orbit4">
+            <div class="planet mars"></div>
+        </div>
+
+    </div>
+
+
+    <!-- КАРТОЧКИ ПЛАНЕТ -->
+    <div class="planet-grid">
+
+        <article class="planet-card">
+            <div class="planet-big mercury"></div>
+            <span>01</span>
+            <h3>МЕРКУРИЙ</h3>
+            <p>
+                Самая маленькая и ближайшая к Солнцу планета.
+            </p>
+            <button onclick="planetInfo('Меркурий')">УЗНАТЬ БОЛЬШЕ →</button>
+        </article>
+
+        <article class="planet-card">
+            <div class="planet-big venus"></div>
+            <span>02</span>
+            <h3>ВЕНЕРА</h3>
+            <p>
+                Планета с самой высокой температурой поверхности.
+            </p>
+            <button onclick="planetInfo('Венера')">УЗНАТЬ БОЛЬШЕ →</button>
+        </article>
+
+        <article class="planet-card featured">
+            <div class="planet-big earth"></div>
+            <span>03</span>
+            <h3>ЗЕМЛЯ</h3>
+            <p>
+                Наш дом и единственная известная планета с жизнью.
+            </p>
+            <button onclick="planetInfo('Земля')">УЗНАТЬ БОЛЬШЕ →</button>
+        </article>
+
+        <article class="planet-card">
+            <div class="planet-big mars"></div>
+            <span>04</span>
+            <h3>МАРС</h3>
+            <p>
+                Красная планета и одна из главных целей будущих миссий.
+            </p>
+            <button onclick="planetInfo('Марс')">УЗНАТЬ БОЛЬШЕ →</button>
+        </article>
+
+        <article class="planet-card">
+            <div class="planet-big jupiter"></div>
+            <span>05</span>
+            <h3>ЮПИТЕР</h3>
+            <p>
+                Крупнейшая планета Солнечной системы.
+            </p>
+            <button onclick="planetInfo('Юпитер')">УЗНАТЬ БОЛЬШЕ →</button>
+        </article>
+
+        <article class="planet-card">
+            <div class="planet-big saturn"></div>
+            <span>06</span>
+            <h3>САТУРН</h3>
+            <p>
+                Газовый гигант с огромной системой колец.
+            </p>
+            <button onclick="planetInfo('Сатурн')">УЗНАТЬ БОЛЬШЕ →</button>
+        </article>
+
+        <article class="planet-card">
+            <div class="planet-big uranus"></div>
+            <span>07</span>
+            <h3>УРАН</h3>
+            <p>
+                Ледяной гигант с необычным наклоном оси.
+            </p>
+            <button onclick="planetInfo('Уран')">УЗНАТЬ БОЛЬШЕ →</button>
+        </article>
+
+        <article class="planet-card">
+            <div class="planet-big neptune"></div>
+            <span>08</span>
+            <h3>НЕПТУН</h3>
+            <p>
+                Самая далёкая от Солнца планета.
+            </p>
+            <button onclick="planetInfo('Нептун')">УЗНАТЬ БОЛЬШЕ →</button>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ГАЛАКТИКА -->
+<section id="galaxy" class="galaxy-section">
+
+    <div class="galaxy-image">
+
+        <div class="galaxy-core"></div>
+
+        <div class="galaxy-arm arm1"></div>
+        <div class="galaxy-arm arm2"></div>
+        <div class="galaxy-arm arm3"></div>
+
+    </div>
+
+    <div class="galaxy-text">
+
+        <span>02 / ГАЛАКТИКИ</span>
+
+        <h2>
+            МЛЕЧНЫЙ ПУТЬ
+        </h2>
+
+        <p>
+            Наша галактика — огромная система из звёзд,
+            газа, пыли и тёмной материи.
+        </p>
+
+        <p>
+            Солнце находится в одном из спиральных рукавов
+            Млечного Пути.
+        </p>
+
+        <button class="main-btn" onclick="showGalaxyFact()">
+            УЗНАТЬ ФАКТ
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ЧЁРНАЯ ДЫРА -->
+<section class="blackhole-section">
+
+    <div class="blackhole">
+        <div class="accretion"></div>
+        <div class="black-center"></div>
+    </div>
+
+    <div class="blackhole-text">
+
+        <span>03 / ТАЙНЫ ВСЕЛЕННОЙ</span>
+
+        <h2>ЧЁРНЫЕ ДЫРЫ</h2>
+
+        <p>
+            Области пространства-времени с настолько сильным
+            гравитационным воздействием, что даже свет не может
+            покинуть их.
+        </p>
+
+        <div class="quote">
+            «Космос хранит больше вопросов,
+            чем человечество успело задать.»
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- МИССИИ -->
+<section id="missions" class="section missions">
+
+    <div class="section-title">
+        <span>04 / ИССЛЕДОВАНИЯ</span>
+        <h2>КОСМИЧЕСКИЕ МИССИИ</h2>
+        <p>
+            Самые известные этапы исследования космоса.
+        </p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="year">1957</div>
+            <div class="timeline-card">
+                <h3>СПУТНИК-1</h3>
+                <p>
+                    Первый искусственный спутник Земли.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">1961</div>
+            <div class="timeline-card">
+                <h3>ЮРИЙ ГАГАРИН</h3>
+                <p>
+                    Первый человек, совершивший полёт в космос.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">1969</div>
+            <div class="timeline-card">
+                <h3>АПОЛЛОН-11</h3>
+                <p>
+                    Первая высадка людей на Луне.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">1990</div>
+            <div class="timeline-card">
+                <h3>HUBBLE</h3>
+                <p>
+                    Запуск космического телескопа «Хаббл».
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">2021</div>
+            <div class="timeline-card">
+                <h3>JAMES WEBB</h3>
+                <p>
+                    Начало работы нового космического телескопа.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ФАКТЫ -->
+<section id="facts" class="facts-section">
+
+    <div class="section-title">
+        <span>05 / ЗНАНИЯ</span>
+        <h2>НЕВЕРОЯТНЫЕ ФАКТЫ</h2>
+    </div>
+
+    <div class="facts-grid">
+
+        <div class="fact-card">
+            <div class="fact-icon">☀</div>
+            <h3>СВЕТ</h3>
+            <p>
+                Свет от Солнца достигает Земли примерно за 8 минут.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-icon">🌌</div>
+            <h3>ГАЛАКТИКИ</h3>
+            <p>
+                Наблюдаемая Вселенная содержит огромное количество галактик.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-icon">🌑</div>
+            <h3>ЛУНА</h3>
+            <p>
+                Луна является естественным спутником Земли.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-icon">🪐</div>
+            <h3>САТУРН</h3>
+            <p>
+                Кольца Сатурна состоят в основном из частиц льда и камня.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-icon">⭐</div>
+            <h3>ЗВЁЗДЫ</h3>
+            <p>
+                Звёзды — огромные плазменные шары, излучающие энергию.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-icon">🚀</div>
+            <h3>БУДУЩЕЕ</h3>
+            <p>
+                Человечество продолжает разрабатывать технологии
+                для дальних космических путешествий.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ФИНАЛ -->
+<section class="final-section">
+
+    <div class="final-content">
+
+        <span>THE UNIVERSE IS WAITING</span>
+
+        <h2>
+            СМОТРИ ДАЛЬШЕ.<br>
+            МЕЧТАЙ БОЛЬШЕ.
+        </h2>
+
+        <p>
+            Космос начинается там, где заканчиваются наши границы.
+        </p>
+
+        <button class="main-btn" onclick="scrollToSection('home')">
+            ↑ В НАЧАЛО
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-logo">
+        ◉ COSMOS
+    </div>
+
+    <p>
+        Исследуй. Открывай. Мечтай.
+    </p>
+
+    <div class="footer-line"></div>
+
+    <small>
+        © 2026 COSMOS — Космос без границ
+    </small>
+
+</footer>
+
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <div id="modalText"></div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
